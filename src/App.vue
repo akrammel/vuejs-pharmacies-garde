@@ -8,21 +8,33 @@
     <b-row class="justify-content-md-center">
       <b-col md="6" style="margin-bottom: 50px;">
         <b-row>
-          <b-col md="12" class="text-center"><b-form-group><b-form-select @change="chargercommunes" v-model="wilayaChosis" :options="wilayas"></b-form-select></b-form-group></b-col>
+          <b-col md="12" class="text-center">
+            <b-form-group>
+              <b-form-select @change="chargercommunes" v-model="wilayaChosis">
+                <b-form-select-option v-for="(option, index) in wilayas" v-bind:key="index" v-bind:value="option.id">
+                  {{ option.wilaya }}
+                </b-form-select-option>
+              </b-form-select>
+            </b-form-group>
+          </b-col>
           <b-col md="12" class="text-left">
               <b-form-group>
                 <b-form-checkbox-group
                   v-model="communesChoisis"
-                  :options="communesnow"
-                  
-                ></b-form-checkbox-group>
+                >
+                <b-form-checkbox
+                 v-for="(option, index) in communesnow" v-bind:key="index" v-bind:value="option.id"
+              >
+                {{option.commune}}
+              </b-form-checkbox>
+                </b-form-checkbox-group>
               </b-form-group>
         </b-col>
-        <b-col md="12" class="text-center"><b-button variant="outline-primary" style="width: 100%">Envoyer</b-button></b-col>
+        <!--<b-col md="12" class="text-center"><b-button variant="outline-primary" style="width: 100%">Envoyer</b-button></b-col>-->
         </b-row>
       </b-col>
       <b-col md="6">
-        <Pharmacies :wilaya="wilayaChosis" :communes="communesChoisis"/>
+        <Pharmacies v-if="wilayaChosis.length != 0 && communesChoisis.length != 0" :wilaya="wilayaChosis" :communes="communesChoisis"/>
       </b-col>  
     </b-row>
   </b-container>
@@ -43,7 +55,7 @@ export default {
       wilayas: [],
       communes: [],
       communesnow: [],
-      wilayaChosis: "",
+      wilayaChosis: "16",
       communesChoisis: []
 
     }
@@ -53,16 +65,23 @@ export default {
       .then(response => (this.wilayas = response.data));
     axios
       .get('../../communes.json')
-      .then(response => (this.communes = response.data));
+      .then(response => (this.communes = response.data)).then(this.chargercommunes);
   },mounted () {
 
   }
   ,methods: {
     chargercommunes: function () {
+      this.communesChoisis = [];
       var s = [];
+      var w = "";
+      this.wilayas.forEach(element => {
+        if(element.id == this.wilayaChosis){
+          w = element.wilaya;
+      }
+      });
       this.communes.forEach(element => {
-        if(element.wilaya == this.wilayaChosis){
-          s.push(element.commune)
+        if(element.wilaya == w){
+          s.push({commune: element.commune, id: element.id})
       }
       this.communesnow = s;
       });  

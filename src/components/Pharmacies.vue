@@ -1,5 +1,7 @@
 <template>
 <div class="text-center">
+    {{wilaya}}<br>
+    {{communes}}<br>
     <b-spinner style="width: 3rem; height: 3rem;" v-if="result.length == 0" variant="primary" type="grow" label="Chargement.."></b-spinner>
     <ul v-else>
       <li v-for="(item, index) in result" v-bind:key="index">{{item[0]}}</li>  
