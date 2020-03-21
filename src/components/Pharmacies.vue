@@ -1,8 +1,10 @@
 <template>
-  <div>
-      
-  </div>
-      
+<div class="text-center">
+    <b-spinner style="width: 3rem; height: 3rem;" v-if="result.length == 0" variant="primary" type="grow" label="Chargement.."></b-spinner>
+    <ul v-else>
+      <li v-for="(item, index) in result" v-bind:key="index">{{item[0]}}</li>  
+   </ul>  
+</div>  
 </template>
 
 <script>
@@ -21,6 +23,18 @@ export default {
     }
   },
   created(){
+    var result = [];
+    var today = new Date(); 
+    var dd = today.getDate(); 
+    var mm = today.getMonth() + 1; 
+    var yyyy = today.getFullYear(); 
+    if (dd < 10) { 
+      dd = '0' + dd; 
+    } 
+    if (mm < 10) { 
+      mm = '0' + mm; 
+    } 
+    today = dd + '-' + mm + '-' + yyyy;
     axios.post('https://cors-anywhere.herokuapp.com/http://www.sante.gov.dz/garde/garde.php', qs.stringify({
           wilay2: this.wilaya,
           valide: 'true',
@@ -30,21 +44,23 @@ export default {
           headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
         .then(function (response) {
-          var result = [];
           let doc = new DOMParser().parseFromString(response.data, 'text/html');
           let tbody = doc.body.querySelectorAll('tbody')[3];
           let trs = tbody.querySelectorAll('tr');
           (trs).forEach(element => {
             var r = [];
-            element.querySelectorAll('td').forEach(td => {
-              r.push(td.textContent)
-            });
-            result.push(r);
-            r = [];
-          });
-          console.log(result);
-
-        });
+            if(element.querySelectorAll('td')[0].textContent.trim() == today){
+              element.querySelectorAll('td').forEach(td => {
+                r.push(td.textContent.trim())
+              });
+            }
+            if(r.length != 0){
+              result.push(r);
+              r = [];
+            }
+          }); 
+        }).then(this.result = result);
+        
   }
 }
 </script>

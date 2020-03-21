@@ -341,7 +341,7 @@
     },
     {
         "wilaya": "LAGHOUAT",
-        "commune": "HASSI R\\'MEL",
+        "commune": "HASSI R'MEL",
         "id": "0306"
     },
     {
@@ -421,7 +421,7 @@
     },
     {
         "wilaya": "LAGHOUAT",
-        "commune": "OUED M\\'ZI",
+        "commune": "OUED M'ZI",
         "id": "0322"
     },
     {
@@ -446,7 +446,7 @@
     },
     {
         "wilaya": "OUM EL BOUAGHI",
-        "commune": "AIN M\\'LILA",
+        "commune": "AIN M'LILA",
         "id": "0403"
     },
     {
@@ -621,7 +621,7 @@
     },
     {
         "wilaya": "BATNA",
-        "commune": "N\\'GAOUS",
+        "commune": "N'GAOUS",
         "id": "0509"
     },
     {
@@ -676,7 +676,7 @@
     },
     {
         "wilaya": "BATNA",
-        "commune": "OULED SELLAM (M\\'CIL)",
+        "commune": "OULED SELLAM (M'CIL)",
         "id": "0520"
     },
     {
@@ -796,7 +796,7 @@
     },
     {
         "wilaya": "BATNA",
-        "commune": "T\\'KOUT",
+        "commune": "T'KOUT",
         "id": "0544"
     },
     {
@@ -926,7 +926,7 @@
     },
     {
         "wilaya": "BEJAIA",
-        "commune": "M\\'CISNA",
+        "commune": "M'CISNA",
         "id": "0609"
     },
     {
@@ -1126,7 +1126,7 @@
     },
     {
         "wilaya": "BEJAIA",
-        "commune": "TIZI N\\'BERBER",
+        "commune": "TIZI N'BERBER",
         "id": "0649"
     },
     {
@@ -1201,7 +1201,7 @@
     },
     {
         "wilaya": "BISKRA",
-        "commune": "M\\'CHOUNECHE",
+        "commune": "M'CHOUNECHE",
         "id": "0712"
     },
     {
@@ -1266,7 +1266,7 @@
     },
     {
         "wilaya": "BISKRA",
-        "commune": "M\\'LILI",
+        "commune": "M'LILI",
         "id": "0725"
     },
     {
@@ -1721,7 +1721,7 @@
     },
     {
         "wilaya": "BOUIRA",
-        "commune": "M\\'CHEDALLAH",
+        "commune": "M'CHEDALLAH",
         "id": "1037"
     },
     {
@@ -2146,7 +2146,7 @@
     },
     {
         "wilaya": "TLEMCEN",
-        "commune": "MARSA BEN M\\'HIDI",
+        "commune": "MARSA BEN M'HIDI",
         "id": "1339"
     },
     {
@@ -2556,7 +2556,7 @@
     },
     {
         "wilaya": "TIZI OUZOU",
-        "commune": "M\\'KIRA",
+        "commune": "M'KIRA",
         "id": "1526"
     },
     {
@@ -2681,7 +2681,7 @@
     },
     {
         "wilaya": "TIZI OUZOU",
-        "commune": "TIZI N\\'THLATA",
+        "commune": "TIZI N'THLATA",
         "id": "1551"
     },
     {
@@ -2771,7 +2771,7 @@
     },
     {
         "wilaya": "ALGER",
-        "commune": "SIDI M\\'HAMED",
+        "commune": "SIDI M'HAMED",
         "id": "1602"
     },
     {
@@ -3111,7 +3111,7 @@
     },
     {
         "wilaya": "DJELFA",
-        "commune": "M\\'LILIHA",
+        "commune": "M'LILIHA",
         "id": "1713"
     },
     {
@@ -3556,7 +3556,7 @@
     },
     {
         "wilaya": "SETIF",
-        "commune": "TIZI N\\'BECHAR",
+        "commune": "TIZI N'BECHAR",
         "id": "1938"
     },
     {
@@ -4066,7 +4066,7 @@
     },
     {
         "wilaya": "SIDI BEL ABBES",
-        "commune": "M\\'CID",
+        "commune": "M'CID",
         "id": "2226"
     },
     {
@@ -4371,7 +4371,7 @@
     },
     {
         "wilaya": "GUELMA",
-        "commune": "HAMMAM N\\'BAIL",
+        "commune": "HAMMAM N'BAIL",
         "id": "2422"
     },
     {
@@ -4976,7 +4976,7 @@
     },
     {
         "wilaya": "M'SILA",
-        "commune": "M\\'SILA",
+        "commune": "M'SILA",
         "id": "2801"
     },
     {
@@ -5001,7 +5001,7 @@
     },
     {
         "wilaya": "M'SILA",
-        "commune": "M\\'TARFA",
+        "commune": "M'TARFA",
         "id": "2806"
     },
     {
@@ -5011,7 +5011,7 @@
     },
     {
         "wilaya": "M'SILA",
-        "commune": "M\\'CIF",
+        "commune": "M'CIF",
         "id": "2808"
     },
     {
@@ -5161,7 +5161,7 @@
     },
     {
         "wilaya": "M'SILA",
-        "commune": "SIDI M\\'HAMED",
+        "commune": "SIDI M'HAMED",
         "id": "2838"
     },
     {
@@ -5456,7 +5456,7 @@
     },
     {
         "wilaya": "OUARGLA",
-        "commune": "N\\'GOUSSA",
+        "commune": "N'GOUSSA",
         "id": "3003"
     },
     {
@@ -5531,7 +5531,7 @@
     },
     {
         "wilaya": "OUARGLA",
-        "commune": "M\\\\\\'NAGUER",
+        "commune": "M'NAGUER",
         "id": "3018"
     },
     {
@@ -5856,7 +5856,7 @@
     },
     {
         "wilaya": "BORDJ BOU ARRERIDJ",
-        "commune": "EL M\\'HIR",
+        "commune": "EL M'HIR",
         "id": "3405"
     },
     {
@@ -6176,7 +6176,7 @@
     },
     {
         "wilaya": "EL TARF",
-        "commune": "BEN M\\'HIDI",
+        "commune": "BEN M'HIDI",
         "id": "3603"
     },
     {
@@ -6511,7 +6511,7 @@
     },
     {
         "wilaya": "EL OUED",
-        "commune": "M\\'RARA",
+        "commune": "M'RARA",
         "id": "3922"
     },
     {
@@ -6536,7 +6536,7 @@
     },
     {
         "wilaya": "EL OUED",
-        "commune": "EL M\\'GHAIER",
+        "commune": "EL M'GHAIER",
         "id": "3927"
     },
     {
@@ -6561,7 +6561,7 @@
     },
     {
         "wilaya": "KHENCHELA",
-        "commune": "M\\'TOUSSA",
+        "commune": "M'TOUSSA",
         "id": "4002"
     },
     {
@@ -6641,7 +6641,7 @@
     },
     {
         "wilaya": "KHENCHELA",
-        "commune": "M\\'SARA",
+        "commune": "M'SARA",
         "id": "4018"
     },
     {
@@ -6731,7 +6731,7 @@
     },
     {
         "wilaya": "SOUK AHRAS",
-        "commune": "M\\'DAOUROUCHE",
+        "commune": "M'DAOUROUCHE",
         "id": "4115"
     },
     {
