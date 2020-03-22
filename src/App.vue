@@ -152,8 +152,8 @@ footer {
   position: fixed!important;
   bottom: 0;
   background-color: #f8f9fa;
-  height: 56px;
+  height: 40px;
   width: 100%;
-  font-size: 14px!important;
+  font-size: 12px!important;
 }
 </style>
