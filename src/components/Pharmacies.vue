@@ -1,11 +1,12 @@
 <template>
-<div class="text-center">
-    {{wilaya}}<br>
-    {{communes}}<br>
-    <b-spinner style="width: 3rem; height: 3rem;" v-if="result.length == 0" variant="primary" type="grow" label="Chargement.."></b-spinner>
-    <ul v-else>
+<div class="row h-100 text-center">
+  <div class="col-sm-12 my-auto">
+      {{wilaya}} -> {{communes}}<br>
+      <b-spinner style="width: 5rem; height: 5rem;" class="align-middle" v-if="result.length == 0" variant="primary" type="grow" label="Chargement.."></b-spinner>
+      <ul v-else>
       <li v-for="(item, index) in result" v-bind:key="index">{{item[0]}}</li>  
-   </ul>  
+   </ul>   
+  </div>   
 </div>  
 </template>
 

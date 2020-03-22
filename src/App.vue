@@ -1,12 +1,12 @@
 <template>
 <div id="app">
     <b-navbar type="light" variant="light">
-      <b-navbar-brand class="title">Pharmacies de Garde <small>Algérie</small></b-navbar-brand>
+      <b-navbar-brand class="title">vuejs-pharmacies-garde</b-navbar-brand>
     </b-navbar>
 
     <b-container style="margin-top: 50px;margin-bottom: 50px;">
     <b-row class="justify-content-md-center">
-      <b-col md="6" style="margin-bottom: 50px;">
+      <b-col md="6">
         <b-row>
           <b-col md="12" class="text-center">
             <b-form-group>
@@ -18,6 +18,10 @@
             </b-form-group>
           </b-col>
           <b-col md="12" class="text-left">
+            <div class="btn-grp">
+            <b-button @click="checkAll" variant="primary" v-if="communesnow.length != 0">Chocher tout</b-button>
+            <b-button @click="uncheckAll" variant="outline-primary" v-if="communesnow.length != 0">Décohocher tout</b-button>
+            </div>
               <b-form-group>
                 <b-form-checkbox-group
                   v-model="communesChoisis"
@@ -85,6 +89,24 @@ export default {
       }
       this.communesnow = s;
       });  
+    },
+    checkAll: function () {
+      var s = [];
+      var w = "";
+      this.wilayas.forEach(element => {
+        if(element.id == this.wilayaChosis){
+          w = element.wilaya;
+      }
+      });
+      this.communes.forEach(element => {
+        if(element.wilaya == w){
+          s.push(element.id)
+      }
+      this.communesChoisis = s;
+      });  
+    },
+    uncheckAll: function(){
+      this.communesChoisis = []
     }
   }
 }
@@ -94,17 +116,20 @@ export default {
 .title {
   font-size: 16px;
 }
-.title > small {
-  font-size: 10px;
-}
 .navbar-brand {
   margin-right: auto!important;
   margin-left: auto!important;
 }
 .custom-control-inline {
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin-right: 15px!important;
+  margin-bottom: 5px!important;
   font-size: 14px!important;
   line-height: 1.8!important;
+}
+.btn-grp {
+  margin-bottom: 10px;
+}
+.btn-grp > button {
+  margin-right: 10px!important;
 }
 </style>
