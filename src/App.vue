@@ -9,7 +9,8 @@
       <b-col md="6">
         <b-row>
           <b-col md="12" class="text-center">
-            <b-form-group>
+            <b-form-group class="text-left">
+              <label>Choisir la wilaya</label>
               <b-form-select @change="chargercommunes" v-model="wilayaChosis">
                 <b-form-select-option v-for="(option, index) in wilayas" v-bind:key="index" v-bind:value="option.id">
                   {{ option.wilaya }}
@@ -18,9 +19,10 @@
             </b-form-group>
           </b-col>
           <b-col md="12" class="text-left">
+            <label>Choisir la où les communes</label>
             <div class="btn-grp">
-            <b-button @click="checkAll" variant="primary" v-if="communesnow.length != 0">Chocher tout</b-button>
-            <b-button @click="uncheckAll" variant="outline-primary" v-if="communesnow.length != 0">Décohocher tout</b-button>
+            <b-button @click="checkAll" variant="primary" v-if="communesnow.length != 0">Tout chocher</b-button>
+            <b-button @click="uncheckAll" variant="outline-primary" v-if="communesnow.length != 0">Tout décohocher</b-button>
             </div>
               <b-form-group>
                 <b-form-checkbox-group
