@@ -1,11 +1,30 @@
 <template>
 <div class="row h-100 text-center">
   <div class="col-sm-12 my-auto">
-      {{wilaya}} -> {{communes}}<br>
-      <b-spinner style="width: 5rem; height: 5rem;" class="align-middle" v-if="result.length == 0" variant="primary" type="grow" label="Chargement.."></b-spinner>
-      <ul v-else>
-      <li v-for="(item, index) in result" v-bind:key="index">{{item[0]}}</li>  
-   </ul>   
+      <b-spinner style="width: 5rem; height: 5rem;" class="align-middle" v-if="result.length == 0" variant="primary" type="grow" label="Chargement.."></b-spinner>        
+      <b-table-simple v-else
+      responsive
+      style="margin-bottom: 50px;"
+      >
+      <b-thead>
+        <b-tr>
+          <b-th>Date</b-th>
+          <b-th>Heure</b-th>
+          <b-th>Commune</b-th>
+          <b-th>Pharmacien</b-th>
+          <b-th>Adresse</b-th>
+        </b-tr>
+        </b-thead>
+        <b-tbody>
+        <b-tr v-for="(item, index) in result" v-bind:key="index">
+          <b-td width="100">{{item[0]}}</b-td>
+          <b-td width="100">{{item[1]}}</b-td>
+          <b-td>{{item[2]}}</b-td>
+          <b-td>{{item[3]}}</b-td>
+          <b-td>{{item[4]}}</b-td>
+        </b-tr>
+        </b-tbody>
+      </b-table-simple>
   </div>   
 </div>  
 </template>
@@ -54,7 +73,7 @@ export default {
             var r = [];
             if(element.querySelectorAll('td')[0].textContent.trim() == today){
               element.querySelectorAll('td').forEach(td => {
-                r.push(td.textContent.trim())
+                r.push(td.textContent.trim().replace('\\', ""))
               });
             }
             if(r.length != 0){

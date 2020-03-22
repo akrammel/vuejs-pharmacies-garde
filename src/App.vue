@@ -1,10 +1,10 @@
 <template>
 <div id="app">
-    <b-navbar type="light" variant="light">
+    <b-navbar fixed="top" type="light" variant="light">
       <b-navbar-brand class="title">vuejs-pharmacies-garde</b-navbar-brand>
     </b-navbar>
-
-    <b-container style="margin-top: 50px;margin-bottom: 50px;">
+    <b-container style="margin-top: 100px;margin-bottom: 100px;">
+    <h1>Pharmacies de garde Algérie</h1>
     <b-row class="justify-content-md-center">
       <b-col md="6">
         <b-row>
@@ -44,6 +44,11 @@
       </b-col>  
     </b-row>
   </b-container>
+<footer class="row text-center">
+  <div class="col-sm-12 my-auto">
+   <span>©{{year}} <a href="https://github.com/akrammel">akrammel</a> tous droits réservés</span>
+  </div>
+</footer>
 </div>
 </template>
 
@@ -62,10 +67,12 @@ export default {
       communes: [],
       communesnow: [],
       wilayaChosis: "16",
-      communesChoisis: []
+      communesChoisis: [],
+      year: ""
 
     }
   },created () {
+    this.year = new Date().getFullYear(); 
     axios
       .get('../../wilayas.json')
       .then(response => (this.wilayas = response.data));
@@ -129,9 +136,24 @@ export default {
   line-height: 1.8!important;
 }
 .btn-grp {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .btn-grp > button {
   margin-right: 10px!important;
+}
+body {
+  font-size: 16px!important;
+}
+table > tbody {
+  font-size: 14px!important;
+  text-transform: uppercase!important;
+}
+footer {
+  position: fixed!important;
+  bottom: 0;
+  background-color: #f8f9fa;
+  height: 56px;
+  width: 100%;
+  font-size: 14px!important;
 }
 </style>
