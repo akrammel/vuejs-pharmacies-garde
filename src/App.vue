@@ -44,9 +44,11 @@
       </b-col>  
     </b-row>
   </b-container>
-<footer class="row text-center">
-  <div class="col-sm-12 my-auto">
-   <span>©{{year}} <a href="https://github.com/akrammel">akrammel</a> tous droits réservés</span>
+<footer class="text-center">
+  <div class="row h-100">
+    <div class="col-sm-12 my-auto">
+        <span>©{{year}} <a href="https://github.com/akrammel">akrammel</a> tous droits réservés</span>
+    </div>
   </div>
 </footer>
 </div>
