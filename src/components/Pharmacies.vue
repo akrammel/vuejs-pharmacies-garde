@@ -81,7 +81,7 @@ export default {
               r = [];
             }
           }); 
-        }).then(this.result = result);
+        }).then(this.result = result).then(result = []);
         
   }
 }

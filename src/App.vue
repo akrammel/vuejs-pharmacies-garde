@@ -40,14 +40,14 @@
         </b-row>
       </b-col>
       <b-col md="6">
-        <Pharmacies v-if="wilayaChosis.length != 0 && communesChoisis.length != 0" :wilaya="wilayaChosis" :communes="communesChoisis"/>
+        <Pharmacies v-if="$data.wilayaChosis.length != 0 && $data.communesChoisis.length != 0" :wilaya="$data.wilayaChosis" :communes="$data.communesChoisis"/>
       </b-col>  
     </b-row>
   </b-container>
 <footer class="text-center">
   <div class="row h-100">
     <div class="col-sm-12 my-auto">
-        <span>©{{year}} <a href="https://github.com/akrammel">akrammel</a> tous droits réservés</span>
+        <span>Check out the <a href="https://github.com/akrammel/vuejs-pharmacies-garde">Repository</a> on Github.</span>
     </div>
   </div>
 </footer>
@@ -71,7 +71,6 @@ export default {
       wilayaChosis: "16",
       communesChoisis: [],
       year: ""
-
     }
   },created () {
     this.year = new Date().getFullYear(); 
