@@ -137,7 +137,6 @@ export default {
     },
     re: function() {
       this.key += 1;
-      console.log(this.communesChoisis);
     }
   }
 };
