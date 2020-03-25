@@ -91,8 +91,7 @@ export default {
           }
         });
       })
-      .then((this.result = result))
-      .then((result = []));
+      .then(this.result = result)
   }
 };
 </script>

@@ -35,7 +35,7 @@
                 >Tout décohocher</b-button>
               </div>
               <b-form-group>
-                <b-form-checkbox-group v-model="communesChoisis">
+                <b-form-checkbox-group @change="re" v-model="communesChoisis">
                   <b-form-checkbox
                     v-for="(option, index) in communesnow"
                     v-bind:key="index"
@@ -44,14 +44,14 @@
                 </b-form-checkbox-group>
               </b-form-group>
             </b-col>
-            <!--<b-col md="12" class="text-center"><b-button variant="outline-primary" style="width: 100%">Envoyer</b-button></b-col>-->
           </b-row>
         </b-col>
         <b-col md="6">
           <Pharmacies
-            v-if="$data.wilayaChosis.length != 0 && $data.communesChoisis.length != 0"
-            :wilaya="$data.wilayaChosis"
-            :communes="$data.communesChoisis"
+            v-if="wilayaChosis.length != 0 && communesChoisis.length != 0"
+            :key="key"
+            :wilaya="wilayaChosis"
+            :communes="communesChoisis"
           />
         </b-col>
       </b-row>
@@ -60,8 +60,8 @@
       <div class="row h-100">
         <div class="col-sm-12 my-auto">
           <span>
-            Check out the
-            <a href="https://github.com/akrammel/vuejs-pharmacies-garde">Repository</a> on Github.
+            Découvrez le
+            <a href="https://github.com/akrammel/vuejs-pharmacies-garde">repository</a> sur Github.
           </span>
         </div>
       </div>
@@ -85,7 +85,8 @@ export default {
       communesnow: [],
       wilayaChosis: "16",
       communesChoisis: [],
-      year: ""
+      year: "",
+      key: 0
     };
   },
   created() {
@@ -133,6 +134,10 @@ export default {
     },
     uncheckAll: function() {
       this.communesChoisis = [];
+    },
+    re: function() {
+      this.key += 1;
+      console.log(this.communesChoisis);
     }
   }
 };
