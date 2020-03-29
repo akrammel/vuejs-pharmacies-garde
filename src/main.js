@@ -1,13 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { TablePlugin } from 'bootstrap-vue'
-import { SpinnerPlugin } from 'bootstrap-vue'
-import { LayoutPlugin } from 'bootstrap-vue'
-import { FormGroupPlugin } from 'bootstrap-vue'
-import { FormSelectPlugin } from 'bootstrap-vue'
-import { FormCheckboxPlugin } from 'bootstrap-vue'
-import { ButtonPlugin } from 'bootstrap-vue'
-import { NavbarPlugin } from 'bootstrap-vue'
+import { NavbarPlugin,TablePlugin,SpinnerPlugin,LayoutPlugin,FormGroupPlugin,FormSelectPlugin,FormCheckboxPlugin,ButtonPlugin } from 'bootstrap-vue'
 Vue.use(NavbarPlugin)
 Vue.use(FormCheckboxPlugin)
 Vue.use(ButtonPlugin)
