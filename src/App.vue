@@ -83,7 +83,7 @@ export default {
       wilayas: [],
       communes: [],
       communesnow: [],
-      wilayaChosis: "16",
+      wilayaChosis: "",
       communesChoisis: [],
       year: "",
       key: 0
@@ -92,12 +92,12 @@ export default {
   created() {
     this.year = new Date().getFullYear();
     axios
-      .get("../../wilayas.json")
-      .then(response => (this.wilayas = response.data));
-    axios
-      .get("../../communes.json")
-      .then(response => (this.communes = response.data))
-      .then(this.chargercommunes);
+      .get("../../khalouta.json")
+      .then(response => {
+        this.wilayas = response.data.wilayas;
+        this.communes = response.data.communes;
+        this.wilayaChosis = "16";
+      }).then(this.chargercommunes);
   },
   mounted() {},
   methods: {
